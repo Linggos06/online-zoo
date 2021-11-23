@@ -1,0 +1,849 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #2A8086;
+    width: 100%;
+}
+
+.visually_hidden {
+    visibility: hidden;
+}
+
+.centered_wrapper {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+header {
+    background-color: #2A8086;
+    filter: drop-shadow(0px 1px 10px rgba(18, 87, 91, 0.25));
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 110px;
+    padding-top: 12.61px;
+}
+
+
+.logo {
+    flex: 0 0 7.3648%;
+    height: 84.39%;
+    padding-right: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 92.6351%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav li {
+    display: inline-flex;
+}
+
+nav a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: #C5E1E5;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+.left_menu {
+    flex: 0 1 50%;
+}
+
+.left_menu li:hover ::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: #C5E1E5;
+    transform: scaleX(1);
+}
+
+.active {
+    cursor: default;
+}
+
+.active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: #C5E1E5;
+    transform: scaleX(1);
+}
+
+.right_menu {
+    justify-content: space-between;
+    flex: 0 1 42%;
+}
+
+.right_menu a {
+    padding-top: 16px;
+}
+
+
+.search_icon {
+    position: relative;
+    padding-left: 0;
+    left: 10px;
+    bottom: 5px;
+}
+
+.signup_button a {
+    border: 1px solid #C5E1E5;
+    padding: 16px 14px 15px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.login_icon {
+    display: none;
+    background: url("../assets/icons/log_in_sign_up_icon.png") center/cover no-repeat;
+    width: 56px;
+    height: 56px;
+}
+
+.right_menu .search {
+    opacity: 0;
+    order: -1;
+    transition: opacity 0.5s ease-out;
+}
+
+.right_menu .search input {
+    position: relative;
+    right: -35px;
+    top: 8px;
+    padding: 10px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: right 0.5s ease-out;
+}
+
+.search_icon:hover+.search {
+    opacity: 1;
+}
+
+.search_icon:hover+.search input {
+    right: -15px;
+}
+
+.burger {
+    display: none;
+}
+
+.closeMenu {
+    display: none;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+#map {
+    background-color: #2A8086;
+    padding-bottom: 50px; 
+}
+
+#map h2 {
+position: relative;
+font-family: 'Rubik', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-transform: uppercase;
+color: #C5E1E6;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+.map_container {
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 916px;
+}
+
+.map{
+position: relative;
+cursor: pointer;
+}
+
+.map_img {
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+}
+
+
+.animal_figures {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.animal_mask {
+    position: absolute;
+    width: 106px;
+    height: 95px;
+    background: url("../assets/icons/blue_mask.png") no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.animal_mask:hover {
+    background: url("../assets/icons/mask_without_shadow.png") no-repeat; 
+    background-position: center;
+    background-size: contain; 
+}
+
+.animal_photo {
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: contain; 
+    width: 73px;
+    height: 70px;
+    border-radius: 120% 120% 170% 100% / 120% 120% 150% 150%;
+    margin-bottom: 5px;
+}
+
+.panda {
+    background-image: url("../assets/images/panda_icon-min.png");
+}
+
+.gorilla {
+    background-image: url("../assets/images/gorilla_icon.png");
+}
+
+.eagle {
+    background-image: url("../assets/images/eagle_icon.png");
+}
+
+.alligator {
+    background-image: url("../assets/images/alligator_icon.png");
+}
+
+.panda_mask {
+    top: 44%;
+    right: 23%;
+}
+
+.gorilla_mask {
+    top: 59%;
+    right: 46.5%;
+}
+
+.alligator_mask{
+top: 46%;
+  left: 22%;
+}
+
+.eagle_mask {
+    top: 40%;
+  left: 10%;
+}
+
+.eagle_mask:hover ::before {
+content: "Eagle, California - St. Cathalina, USA";
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+bottom: 140px;
+right: 120px;
+color: #0D444D;
+width: 410px;
+height: 107px;
+background: #FFFFFF;
+box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+border-radius: 10px;
+}
+
+.eagle_mask:hover ::after {
+    content: '';
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 20px;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.gorilla_mask:hover ::before {
+    content: "Gorilla, Congo, Africa";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 140px;
+    right: 120px;
+    color: #0D444D;
+    width: 410px;
+    height: 107px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    }
+    
+    .gorilla_mask:hover ::after {
+        content: '';
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 0 20px;
+        border-color: #ffffff transparent transparent transparent;
+    }
+
+    .alligator_mask:hover ::before {
+        content: "Alligator, Florida, USA";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 140px;
+        right: 95px;
+        color: #0D444D;
+        width: 410px;
+        height: 107px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+        }
+        
+        .alligator_mask:hover ::after {
+            content: '';
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 20px 0 20px;
+            border-color: #ffffff transparent transparent transparent;
+        }
+
+
+        .panda_mask:hover ::before {
+            content: "Panda, China";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            bottom: 140px;
+            right: 120px;
+            color: #0D444D;
+            width: 410px;
+            height: 107px;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+            border-radius: 10px;
+            }
+            
+            .panda_mask:hover ::after {
+                content: '';
+                position: absolute;
+                bottom: 100px;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 20px 20px 0 20px;
+                border-color: #ffffff transparent transparent transparent;
+            }
+
+
+.map_sizer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 79px;
+}
+
+.plus,
+.minus {
+width: 32.52px;
+height: 32.52px;
+left: 47.48px;
+background: rgba(255, 255, 255, 0.4);
+background-position: center;
+background-repeat: no-repeat;
+border: 1.5px solid #FFFFFF;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.plus {
+    background-image: url("../assets/icons/plus_icon.png");
+}
+
+.minus {
+    background-image: url("../assets/icons/minus_icon.png");
+
+}
+
+
+footer {
+    height: 200px;
+    background-color: #196469;
+    width: 100%;
+
+}
+
+footer .logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+footer .container {
+    display: flex;
+    height: 150px;
+    width: 70%;
+    align-items: flex-end;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 0 70%;
+    list-style: none;
+    text-decoration: none;
+    height: 85px;
+}
+
+
+footer li {
+    display: inline-flex;
+
+}
+
+footer li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: #C5E1E5;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+footer li:hover ::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: #C5E1E5;
+    transform: scaleX(1);
+}
+
+.extra_info_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.extra_info {
+    display: inline-block;
+    position: relative;
+    bottom: 50px;
+}
+
+.extra_info p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+footer p+p {
+    margin-top: 10px;
+}
+
+
+
+
+@media (max-width: 1540px) {
+
+    .centered_wrapper{
+       width: 95%;
+    }
+}
+
+
+@media (max-width: 1331px) {
+
+#map h2 {
+    margin-bottom: 0;
+    }
+
+.right_menu {
+justify-content: space-between;
+flex: 0 1 35%;
+}
+
+.login,
+.signup_button {
+    display: none;
+}
+
+.login_icon {
+    display: inline-block;
+}
+
+}
+
+
+
+@media (max-width: 1220px) {
+
+    .centered_wrapper{
+        max-width: 1140px;
+    }
+
+}
+
+@media (max-width: 1188px) {
+
+    #map h2 {
+        margin-bottom: 30px;
+        }
+
+        .map{
+            height: 716.28px;
+            }
+
+    .left_menu {
+        flex-basis: 65%;
+    }
+
+    .right_menu {
+        flex-basis: 35%;
+    }
+
+    .right_menu .search input {
+        right: -75px;
+        width: 100px;
+    }
+
+    .search_icon:hover+.search input {
+        right: -55px;
+    }
+
+
+    .animal_mask {
+        background-size: cover;
+        width: 76px;
+        height: 65px;
+    }
+    
+    
+    .animal_photo {
+        width: 52.04px;
+        height: 50.24px; 
+    }
+    
+    
+    .eagle_mask:hover ::before {
+    content: " ";
+    display: none;
+    }
+    
+    .eagle_mask:hover ::after {
+        content: '';
+        display: none;
+    }
+    
+    .gorilla_mask:hover ::before {
+        content: " ";
+        display: none;
+        }
+        
+        .gorilla_mask:hover ::after {
+            content: '';
+            display: none;
+        }
+    
+        .alligator_mask:hover ::before {
+            content: " ";
+            display: none;
+            }
+            
+            .alligator_mask:hover ::after {
+                content: '';
+                display: none;
+            }
+    
+            .panda_mask:hover ::before {
+                content: " ";
+                display: none;
+                }
+                
+                .panda_mask:hover ::after {
+                    content: '';
+                    display: none;
+                }
+    
+
+}
+
+@media (max-width: 1096px) {
+
+    .right_menu .search input {
+        right: -55px;
+    }
+
+    .search_icon:hover+.search input {
+        right: -45px;
+    }
+}
+
+@media (max-width: 999px) {
+  
+    
+    .right_menu .search input {
+        right: -45px;
+    }
+
+    .search_icon:hover+.search input {
+        right: -35px;
+    }
+
+
+}
+
+
+
+@media (max-width: 895px){
+
+    header {
+        position: fixed;
+        filter: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    .header {
+        height: 78px;
+    }
+
+
+    .logo {
+    display: flex;
+    align-items: center;
+    }
+
+    .logo a img,
+    .logo a {
+        display: block;
+        width: 49.08px;
+        height: 38px;
+    }
+
+
+        .map{
+            height: 516.28px;
+            }
+
+
+
+    footer ul {
+        display: none;
+    }
+
+
+    .right_menu
+    {
+       display: none;
+   }
+
+   .left_menu {
+       height: 100vh;
+       position: fixed;
+       right: 0;
+       left: 0;
+       top: 0;
+       z-index: 20;
+       background-color: #2A8086;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       transition: top 1s ease;
+       display: none;
+       cursor: pointer;
+   }
+
+   .left_menu li {
+    padding: 10px;
+    border: 10px solid transparent;
+ }
+
+ 
+.left_menu li:hover ::after{
+ width: 0;
+ height: 0;
+ top: 0;
+ background: none;
+ transform: none;
+}
+
+ .left_menu li a:hover {
+     color: rgb(48, 114, 113);
+     transform: scale(1.4);
+ }
+
+   .closeMenu {
+       display: block;
+       position: absolute;
+       color: #ffffff;
+       font-size: 1.5rem;
+       top: 20px;
+       right: 20px;
+       cursor: pointer;
+   }
+
+   .burger {
+       display: block;
+       position: absolute;
+       right: 20px;
+       width: 35px;
+       height: 35px;
+       background: url("../assets/icons/Burger-menu.png") center bottom/cover no-repeat;
+       cursor: pointer;
+   }
+
+    #map {
+       margin-top: 98px;
+       z-index: -1;
+   }
+
+   .map_container{
+    z-index: 0;
+    }
+
+  }
+
+
+@media (max-width: 760px) {
+
+footer {
+    height: 78px;
+}
+
+
+footer .container {
+    position: relative;
+    height: 38px;
+    top: 20px;
+}
+
+.extra_info {
+    bottom: 10px;
+}
+
+.extra_info p {
+    font-size: 10px;
+    line-height: 12px;
+}
+footer p+p {
+    margin-top: 5px;
+}
+
+  }
+
+
+
+@media (max-width: 650px){
+
+    .header {
+        height: 78px;
+        
+    }
+
+    #map h2 {
+        margin-bottom: 60px;
+    }
+
+}
+
+@media (max-width: 570px){
+
+    .header {
+        height: 50px;
+        padding-top: 7px;
+    }
+
+    .map_img,
+    .animal_figures {
+        width: 570px;   
+    } 
+
+    .map {
+        overflow: hidden; 
+    }
+}
+

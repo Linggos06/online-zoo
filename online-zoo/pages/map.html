@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="map.css" />
+    <title>Map</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="centered_wrapper">
+        <div class="header">
+          <div class="logo">
+            <a href="../pages/index.html">
+              <img src="../assets/images/Logo-large.svg" alt="site_logo">
+              <h1 class="visually_hidden">Online Zoo</h1>
+            </a>
+          </div>
+          <nav>
+            <ul class="left_menu">
+              <li><a href="../pages/index.html">About</a></li>
+              <li><a href="../pages/map.html" class="active">Map</a></li>
+              <li><a href="../pages/zoos/panda.html">Zoos</a></li>
+              <li><a href="../pages/404.html">Contact us</a></li>
+              <li><a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo">Design</a></li>
+              <div class="closeMenu"><i class="fa fa-times"></i></div>
+            </ul>
+            <ul class="right_menu">
+              <li class="search_icon"><a href=""><img src="../assets/icons/Frame.png" alt="Find"></a></li>
+              <li class="search"><input type="text" placeholder="Search.."></li>
+              <li class="login"><a href="#">Log in</a></li>
+              <li class="login_icon"><a href="#"></a></li>
+              <li class="signup_button"><a href="#">Sign up</a></li>
+            </ul>
+            <div class="burger openMenu"> </div> 
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="map">
+        <div class="centered_wrapper">
+          <h2>Choose your favorite Animal</h2>
+          <div class="map_container">
+            <div class="map">
+              <img src="../assets/images/Map.svg" alt="map" class="map_img" />
+              <div class="animal_figures">
+                <a href="../pages/zoos/eagle.html">
+                  <div class="animal_mask eagle_mask">
+                    <div class="animal_photo eagle"></div>
+                  </div>
+                </a>
+                <a href="../pages/zoos/alligator.html">
+                  <div class="animal_mask alligator_mask">
+                    <div class="animal_photo alligator"></div>
+                  </div>
+                </a>
+                <a href="../pages/zoos/gorilla.html">
+                  <div class="animal_mask gorilla_mask">
+                    <div class="animal_photo gorilla"></div>
+                  </div>
+                </a>
+                <a href="../pages/zoos/panda.html">
+                  <div class="animal_mask panda_mask">
+                    <div class="animal_photo panda"></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="map_sizer">
+            <div class="buttons">
+              <div class="plus"></div>
+              <div class="minus"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="centered_wrapper">
+        <div class="container">
+          <div class="logo">
+            <a href="../pages/index.html">
+              <img src="../assets/images/Logo-large.svg" alt="site_logo">
+            </a>
+          </div>
+          <ul>
+            <li><a href="../pages/index.html">About</a></li>
+            <li><a href="../pages/map.html">Map</a></li>
+            <li><a href="../pages/zoos/panda.html">Zoos</a></li>
+            <li><a href="../pages/404.html">Contact us</a></li>
+            <li><a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo">Design</a></li>
+          </ul>
+        </div>
+        <div class="extra_info_wrapper">
+          <div class="extra_info">
+            <p>Design by Lemeshko Kateryna</p>
+            <p>©RSSchool and ©Yem Digital 2021</p>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+    <script src="../pages/map.js"></script>
+    <script src="../pages/menu.js"></script>
+  </body>
+</html>
+
